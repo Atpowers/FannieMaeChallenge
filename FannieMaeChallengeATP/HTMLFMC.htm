@@ -50,6 +50,29 @@
 	</body>
 </html>
 
+
+
+<!--<script src="JsonParse.js"></script> -->
+<script>
+	 var filereader = new window.FileReader();
+ 	filereader.onload = (function(filereader){
+   return function()
+   {
+     var json = filereader.results;
+     var jsondata = JSON.parse(json);
+     			var studentInfo = "";
+     			$.each(json, function(key,value){
+				studentInfo = "<tr>";
+				studentInfo += "<td>" + value.first_name + "</td>";
+				studentInfo += "<td>" + value.last_name + "</td>";
+				studentInfo += "<td>" + value.ssn + "</td>";
+				studentInfo += "<td>" + value.age + "</td>";
+				studentInfo += "</tr>";
+			});
+			$('#student_table').append(studentInfo);
+   }
+   })(filereader);
+</script>
 <!-- this script was my first attempt at collecting the data this would work if I used a webserver
 <script>
 	$(document).ready(function(){
