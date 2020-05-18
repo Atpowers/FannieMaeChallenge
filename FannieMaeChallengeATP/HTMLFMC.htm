@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "FannieMaeChallenge">
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+	<head/>
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	was being used with script below-->
+
+	<body>
+		<h2>Students</h2>
+
+		<form>
+			<input type="text" id="search" name="search" placeholder="Search"> <!-- search box -->
+		</form>
+
+		<div id="wrap">
+			<div id="scroll">
+				<table id="student_table">
+					<thead>
+						<tr>
+							<th><span class="text">First Name</span></th>
+							<th><span class="text">Last Name</span></th>
+							<th><span class="text">SSN</span></th>
+							<th><span class="text">Age</span></th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Austin</td>
+						<td>Powers</td>
+						<td>1123232</td>
+						<td>23</td>
+					</tr>
+					<tr>
+						<td>Austin</td>
+						<td>Powers</td>
+						<td>1123232</td>
+						<td>23</td>
+					</tr>
+					<tr>
+					<td>Austin</td>
+					<td>Powers</td>
+					<td>1123232</td>
+					<td>23</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- this script was my first attempt at collecting the data this would work if I used a webserver
+<script>
+	$(document).ready(function(){
+		$.getJSON("JsonTest.json", function(json){
+			var studentInfo = "";
+			$.each(json, function(key,value){
+				studentInfo = "<tr>";
+				studentInfo += "<td>" + value.first_name + "</td>";
+				studentInfo += "<td>" + value.last_name + "</td>";
+				studentInfo += "<td>" + value.ssn + "</td>";
+				studentInfo += "<td>" + value.age + "</td>";
+				studentInfo += "</tr>";
+			});
+			$('#student_table').append(studentInfo);
+		});
+	});
+</script> -->

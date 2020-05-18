@@ -1,0 +1,27 @@
+#wrap {
+ position:relative;
+}
+
+#scroll {
+ height:300px;
+ overflow:auto;
+ margin-top:20px;
+ background:#F5F5F5;
+ width: 40%
+ 
+}
+
+#wrap table {
+ width: 100%
+
+}
+
+#wrap table * {
+background:#F5F5F5;
+}
+
+#wrap table thead th .text {
+position: relative;
+width:20%;
+border-bottom: 2px solid #ddd
+}
